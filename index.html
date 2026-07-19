@@ -7,5 +7,55 @@
 <body>
   <h1>Witaj!</h1>
   <p>To moja pierwsza strona internetowa.</p>
+<style>
+#menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #333;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+
+#menu a {
+  display: block;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+}
+
+#menu a:hover {
+  background: #555;
+}
+
+.przycisk {
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+</style>
+
+<span class="przycisk" onclick="otworz()">☰</span>
+
+<div id="menu">
+  <a href="javascript:void(0)" onclick="zamknij()">✖ Zamknij</a>
+  <a href="#">🏠 Strona główna</a>
+  <a href="#">👤 Profil</a>
+  <a href="#">⚙️ Ustawienia</a>
+  <a href="#">📞 Kontakt</a>
+</div>
+
+<script>
+function otworz() {
+  document.getElementById("menu").style.width = "250px";
+}
+
+function zamknij() {
+  document.getElementById("menu").style.width = "0";
+}
+</script>
 </body>
 </html>
